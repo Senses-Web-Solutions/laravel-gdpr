@@ -1,4 +1,4 @@
-# senses/laravel-gdpr
+# senses/gdpr
 
 Laravel package to handle management of GDPR permission cookies. Heavily inspired by Spatie's [laravel-cookie-consent](https://github.com/spatie/laravel-cookie-consent) package
 
@@ -44,20 +44,28 @@ You can disable the plugin by setting `GDPR_ENABLED` to `false` in your `.env.` 
 
 ### Frontend
 
-Provided the `@gdprjs` directive is present, you can manipulate the cookies via javascript.
+Provided the `@gdprjs` directive is present, you can manipulate the gdpr settings via javascript.
 
-The package binds a `laravelGdpr()` method to the `window` object. Allowing you to work with the package from there.
+The package binds a `laravelGdpr` object to the `window` object. Allowing you to work with the package from there.
 
 It's best to reload the page once you're done changing these settings in order for the user's configuration to come into effect.
 
-The `laravelGdpr()` method returns an object with two further methods inside.
+The `laravelGdpr` object has two methods inside it:
 
-`laravelGdpr().get()` will return the user's entire config.
+`laravelGdpr.get()` will return the user's entire config.
 
-`laravelGdpr().set(category, value)` accepts two parameters, `category` and `value`. `value` should be boolean.
+`laravelGdpr.set(category, value)` accepts two parameters, `category` and `value`. `value` should be boolean.
 
-There is an example Vue component available on [codesandbox](https://codesandbox.io/s/senses-gdpr-example-modal-el7dw?file=/src/components/GdprModal.vue)
+The package is frontend-agnostic, allowing you to use your own CSS and JS to construct the GDPR permissions modal.
 
-### Notice
+When one of your toggles or checkboxes is changed, you will need to call the `laravelGdpr.set()` method.
 
-This package should go a long way to being compliant with regulations, but if you want to be 100% sure that your website is compliant, seek professional legal advice.
+**Quick Example:**
+
+``` js
+document.querySelector('input[type="checkbox"]#third_party').addEventListener('click', function(e) {
+    laravelGdpr.set('third_party', e.target.checked);
+});
+```
+
+There is a full example Vue component available on [codesandbox](https://codesandbox.io/s/senses-gdpr-example-modal-el7dw?file=/src/components/GdprModal.vue)
