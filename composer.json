@@ -1,0 +1,40 @@
+{
+    "name": "senses/laravel-gdpr",
+    "description": "A package to manage GDPR data collection consent",
+    "type": "library",
+    "license": "MIT",
+	"keywords": [
+        "senses",
+        "cookie",
+        "gdpr",
+        "comply",
+        "eu"
+	],
+	"autoload": {
+        "psr-4": {
+            "Senses\\Gdpr\\": "src"
+        }
+    },
+    "authors": [
+        {
+            "name": "Harry",
+            "email": "harry@senses.co.uk",
+			"homepage": "https://senses.co.uk",
+			"role": "Developer"
+        }
+    ],
+    "require": {
+		"php": "^7.1",
+		"illuminate/support": "~5.8.0|^6.0|^7.0|^8.0",
+        "illuminate/view": "~5.8.0|^6.0|^7.0|^8.0",
+        "illuminate/cookie": "~5.8.0|^6.0|^7.0|^8.0"
+	},
+	"extra": {
+        "laravel": {
+            "providers": [
+                "Senses\\Gdpr\\GdprServiceProvider"
+            ]
+        }
+    },
+	"prefer-stable": true
+}
