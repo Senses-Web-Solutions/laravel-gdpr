@@ -11,7 +11,7 @@ class Gdpr
     {
         $config = config('gdpr');
         if(Cookie::has($config['cookie_name'])) {
-            return json_decode(Cookie::get($config['cookie_name']));
+            return json_decode(Cookie::get($config['cookie_name']), true);
         }
         
         return $config['defaults'];
