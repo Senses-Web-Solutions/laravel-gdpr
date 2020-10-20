@@ -2,6 +2,7 @@
     "name": "senses/laravel-gdpr",
     "description": "A package to manage GDPR data collection consent",
     "type": "library",
+    "version": "0.1.0",
     "license": "MIT",
 	"keywords": [
         "senses",
