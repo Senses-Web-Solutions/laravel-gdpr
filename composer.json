@@ -1,6 +1,6 @@
 {
     "name": "senses/laravel-gdpr",
-    "description": "A package to manage GDPR data collection consent",
+    "description": "Laravel package for under the hood management of GDPR permission cookies.",
     "type": "library",
     "version": "0.1.0",
     "license": "MIT",
