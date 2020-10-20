@@ -1,11 +1,11 @@
-# senses/gdpr
+# senses/laravel-gdpr
 
 Laravel package to handle management of GDPR permission cookies. Heavily inspired by Spatie's [laravel-cookie-consent](https://github.com/spatie/laravel-cookie-consent) package
 
 ## Installation
 
 ``` bash 
-composer require senses/gdpr
+composer require senses/laravel-gdpr
 ```
 
 In `config/app.php`

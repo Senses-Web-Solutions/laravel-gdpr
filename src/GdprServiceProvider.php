@@ -29,10 +29,10 @@ class GdprServiceProvider extends ServiceProvider
         });
 
         Blade::directive('gdprjs', function() {
-            return "<?php echo view('gdpr::js')->render(); ?>";
+            return "<?php echo view('sensesgdpr::js')->render(); ?>";
         });
 
-        View::addNamespace('gdpr', __DIR__.'/../resources/views');
+        View::addNamespace('sensesgdpr', __DIR__.'/../resources/views');
     }
 
     public function register()
