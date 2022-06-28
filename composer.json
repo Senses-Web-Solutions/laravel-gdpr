@@ -2,7 +2,7 @@
     "name": "senses/laravel-gdpr",
     "description": "Laravel package for under the hood management of GDPR permission cookies.",
     "type": "library",
-    "version": "0.1.1",
+    "version": "1.0.0",
     "license": "MIT",
     "keywords": [
         "senses",
@@ -25,7 +25,7 @@
         }
     ],
     "require": {
-        "php": "^7.1",
+        "php": "^7.0|^8.0",
         "illuminate/support": "~5.8.0|^6.0|^7.0|^8.0",
         "illuminate/view": "~5.8.0|^6.0|^7.0|^8.0",
         "illuminate/cookie": "~5.8.0|^6.0|^7.0|^8.0"
